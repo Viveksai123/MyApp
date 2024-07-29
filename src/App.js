@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import EventDetails from './components/EventDetails';
+import RegistrationForm from './components/RegistrationForm';
+import ChallengePage from './components/ChallengePage';
+import Leaderboard from './components/Leaderboard';
 import './App.css';
 
 function App() {
+  const [registeredUser, setRegisteredUser] = useState(null);
+
+  const handleRegister = (user) => {
+    setRegisteredUser(user);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app">
+        <Switch>
+          <Route path="/" exact component={EventDetails} />
+          <Route path="/register" render={() => (
+            <RegistrationForm onRegister={handleRegister} />
+          )} />
+          <Route path="/challenge" render={() => (
+            registeredUser ? <ChallengePage /> : <Redirect to="/register" />
+          )} />
+          <Route path="/leaderboard" render={() => (
+            registeredUser ? <Leaderboard /> : <Redirect to="/register" />
+          )} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
