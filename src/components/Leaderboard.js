@@ -1,4 +1,6 @@
 import React from 'react';
+import 'animate.css/animate.min.css';
+
 
 const Leaderboard = () => {
   // Dummy data for leaderboard

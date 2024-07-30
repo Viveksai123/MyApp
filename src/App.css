@@ -33,7 +33,7 @@ p1{
 }
 p{
   font-family: 'Courier New', Courier, monospace;
-  font-size: 15px;
+  font-size: 18px;
   color: #20b506c5;
   filter: brightness(200%);
   font-weight: bold;
@@ -52,8 +52,34 @@ h1{
   backdrop-filter: blur(4px); 
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  padding: 10px;
+  padding: 20px;
   text-align: center;
   box-sizing: border-box;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 1);
+}
+
+/* Add this to your EventDetails.css and RegistrationForm.css files */
+
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typewriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+    margin-bottom: 3vh;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
 }

@@ -1,3 +1,17 @@
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.app.animate {
+  animation: fadeInOut 3s ease-in-out;
+}
+.container, .header, .level, .status, .progress, .image-placeholder, .question, .input-section, button, .loader {
+  --animate-duration: 2s;
+  --animate-delay: 0.5s;
+}
+
 .app {
   background: url("C:/Users/perik/OneDrive/Desktop/event/my-app/public/back.jpg") no-repeat center center fixed; /* Set the background image */
   background-size: cover; /* Ensure the background covers the entire app area */
@@ -11,6 +25,7 @@
 
 .container {
   display: flex;
+  padding: 20px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -20,7 +35,7 @@
   box-shadow: 0 4px 8px rgba(255, 255, 255, 1); /* White shadow */
   margin: 2vh 5vw 1vh 5vw;
   width: 60vw;
-  height: 90vh; /* Adjust height to fit within the app */
+  height: 95vh; /* Adjust height to fit within the app */
   text-align: center;
   box-sizing: border-box;
   color: #FFFFFF; /* White text color */
@@ -32,14 +47,9 @@
   margin-bottom: -5vh;
 }
 
-.header {
+.level {
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.level {
-  font-size: 18px;
   margin-bottom: 20px;
 }
 
@@ -60,7 +70,7 @@
   border-radius: 5px;
   padding: 5px;
   width: 30vw;
-  margin-left: 8vw;
+  margin-left:13vw;
   height: 25vh;
   display: flex;
   align-items: center;

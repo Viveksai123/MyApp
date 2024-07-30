@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import 'animate.css/animate.min.css';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import EventDetails from './components/EventDetails';
 import RegistrationForm from './components/RegistrationForm';
