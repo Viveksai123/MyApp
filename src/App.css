@@ -55,7 +55,8 @@ h1{
   padding: 20px;
   text-align: center;
   box-sizing: border-box;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 8px  #82fa1a;
+  
 }
 
 /* Add this to your EventDetails.css and RegistrationForm.css files */
@@ -82,4 +83,31 @@ h1{
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: orange; }
+}
+
+.bordered-content {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  background-color: transparent; /* Match the background color in the image */
+  border-radius: 10px;
+  margin-bottom: -8vh; 
+  margin-top: -10vh;/* Optional, for rounded corners */
+ /* Space below the bordered content */
+}
+
+
+.elogo1{
+  height: 37vh;
+  width: 30vw;
+}
+.Heading {
+  color: white;
+  font-size: 80px;
+}
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

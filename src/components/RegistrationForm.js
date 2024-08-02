@@ -16,7 +16,10 @@ const RegistrationForm = ({ onRegister }) => {
 
   return (
     <div className="registration-container animate__animated animate__fadeIn ">
-      <img src="/image.png" alt="logo" className="animate__animated animate__fadeInLeftBig" />
+     <div className='row animate__animated animate__fadeInTopLeft'>
+      <img src="./image.png" alt="logo" className="elogo1 "/>
+      <p style={{color:"white"}}>Challenge</p>
+      </div>
       <div className="card animate__animated animate__zoomIn">
         <form onSubmit={handleSubmit} className="registration-form">
           <h1 className="typewriter animate__animated animate__fadeInDown" style={{fontSize:"25px"}}>Register for the Event</h1>
@@ -36,7 +39,7 @@ const RegistrationForm = ({ onRegister }) => {
             required
             className="animate__animated animate__fadeInUp"
           />
-          <button type="submit" className="animate__animated animate__pulse">Register</button>
+          <button type="submit" className="animate__animated animate__fadeInUpBig">Register</button>
         </form>
       </div>
     </div>
