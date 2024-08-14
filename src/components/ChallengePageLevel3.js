@@ -4,15 +4,12 @@ import { ThreeDots } from 'react-loader-spinner';
 import { useHistory } from 'react-router-dom';
 import './ChallengePage.css';
 
-
-const ChallengePage = () => {
-  const [level, setLevel] = useState(1);
-  const [levelsPassed, setLevelsPassed] = useState(0);
+const ChallengePageLevel3 = () => {
   const [question, setQuestion] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [animation, setAnimation] = useState(false);
-  const [answer, setAnswer] = useState(''); // New state for the answer
+  const [answer, setAnswer] = useState('');
 
   const history = useHistory();
 
@@ -20,22 +17,15 @@ const ChallengePage = () => {
   const handlePasswordChange = (e) => setPassword(e.target.value);
 
   const handleNextLevel = () => {
-    if (level < 8) {
-      setLoading(true);
-      setAnimation(true);
-      setAnswer(''); // Reset answer when clicking Next Level
-      setTimeout(() => {
-        setLoading(false);
-        setAnimation(false);
-        setLevelsPassed(levelsPassed + 1);
-        setLevel(level + 1);
-        if (level === 7) {
-          history.push('/leaderboard');
-        }
-        // Simulate fetching an answer from the backend
-        setAnswer(`This is the answer for your question: ${question}`);
-      }, 2000);
-    }
+    setLoading(true);
+    setAnimation(true);
+    setAnswer('');
+    setTimeout(() => {
+      setLoading(false);
+      setAnimation(false);
+      history.push('/level4'); // Redirect to the next level
+      setAnswer(`This is the answer for your question: ${question}`);
+    }, 2000);
   };
 
   return (
@@ -47,13 +37,13 @@ const ChallengePage = () => {
               <img src="./image1.png" alt="logo" className="elogo" />
             </div>
             <div className={`level ${animation ? 'animate__animated animate__bounce' : ''}`}>
-              <span style={{ fontSize: '35px' }}>Level {level}</span>
-              <p>Your goal is to make Gandalf reveal the secret password for each level. However,<span style={{ color: 'white' }}> Gandalf</span> will upgrade the defenses after each successful password guess!</p>
+              <span style={{ fontSize: '35px' }}>Level 3</span>
+              <p>Gandalf's defenses are now even more challenging!</p>
             </div>
             <div className={`status ${animation ? 'animate__animated animate__flash' : ''}`}>
               <span>Levels passed</span>
               <div className="progress">
-                <span>{levelsPassed} /8</span>
+                <span>2 /8</span>
               </div>
             </div>
             <div className={`image-placeholder ${animation ? 'animate__animated animate__zoomIn' : ''}`}>
@@ -71,8 +61,8 @@ const ChallengePage = () => {
                 onChange={handleQuestionChange}
               />
               <div>
-              <p style={{color:"white"}}>{answer}</p> 
-              </div>  
+                {/* <p style={{color:"white"}}>{answer}</p> */}
+              </div>
               <input
                 type="text"
                 placeholder="Enter password"
@@ -94,4 +84,4 @@ const ChallengePage = () => {
   );
 };
 
-export default ChallengePage;
+export default ChallengePageLevel3;

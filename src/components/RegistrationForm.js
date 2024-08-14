@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import 'animate.css/animate.min.css';
- // Ensure this file exists and contains necessary styles
 
 const RegistrationForm = ({ onRegister }) => {
   const [name, setName] = useState('');
@@ -10,19 +9,21 @@ const RegistrationForm = ({ onRegister }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onRegister({ name, email });
-    history.push('/challenge'); 
+    if (name && email) {
+      onRegister({ name, email });
+      history.push('/level1'); // Redirect to the first level instead of /challenge
+    }
   };
 
   return (
-    <div className="registration-container animate__animated animate__fadeIn ">
-     <div className='row animate__animated animate__fadeInTopLeft'>
-      <img src="./image.png" alt="logo" className="elogo1 "/>
-      <p style={{color:"white"}}>Challenge</p>
+    <div className="registration-container animate__animated animate__fadeIn">
+      <div className='row animate__animated animate__fadeInTopLeft'>
+        <img src="./image.png" alt="logo" className="elogo1" />
+        <p style={{color: "white"}}>Challenge</p>
       </div>
       <div className="card animate__animated animate__zoomIn">
         <form onSubmit={handleSubmit} className="registration-form">
-          <h1 className="typewriter animate__animated animate__fadeInDown" style={{fontSize:"25px"}}>Register for the Event</h1>
+          <h1 className="typewriter animate__animated animate__fadeInDown" style={{fontSize: "25px"}}>Register for the Event</h1>
           <input
             type="text"
             placeholder="Name"
