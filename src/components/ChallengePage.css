@@ -1,147 +1,153 @@
 @keyframes fadeInOut {
   0% { opacity: 0; }
-  50% { opacity: 1; }
-  100% { opacity: 0; }
-}
+    50% { opacity: 1; }
+      100% { opacity: 0; }
+      }
 
-.app.animate {
-  animation: fadeInOut 3s ease-in-out;
-}
-.container, .header, .level, .status, .progress, .image-placeholder, .question, .input-section, button, .loader {
-  --animate-duration: 2s;
-  --animate-delay: 0.5s;
-}
+      .app.animate {
+        animation: fadeInOut 3s ease-in-out;
+        }
+        .container, .header, .level, .status, .progress, .image-placeholder, .question, .input-section, button, .loader {
+          --animate-duration: 2s;
+            --animate-delay: 0.5s;
+            }
 
-.app {
-  background-color: black;
-  background-size: cover;
-  font-family: 'Courier New', Courier, monospace;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  filter: brightness(75%);
-}
+            .app {
+              background-color:black;
+                background-size: cover;
+                  font-family: 'Courier New', Courier, monospace;
+                    height: 100vh;
+                      display: flex;
+                        justify-content: center;
+                          align-items: center;
+                            filter: brightness(75%);
+                            }
 
-.border-container {
-  padding: 0%;
-  width: 100%; /* Ensure border-container takes full width */
-  display: flex;
-  justify-content: center;
-}
+                            .border-container {
+                              padding: 0%;
+                                width: 100%; /* Ensure border-container takes full width */
+                                  display: flex;
+                                    justify-content: center;
+                                    }
 
-.header {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
+                                    .header {
+                                      display: flex;
+                                        justify-content: center;
+                                          margin-bottom: 20px;
+                                          }
 
-.elogo {
-  width: 20vw;
-  margin-top: -9vh;
-  height: auto;
-  position: static;
-}
+                                          .elogo {
+                                            width: 20vw;
+                                              margin-top: -9vh;
+                                                height: auto;
+                                                  position: static;
+                                                  }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  border: 5px solid #82fa1a;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 0 20px #82fa1a;
-  width: 60vw;
-  margin-top: -1vh;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(4px);
-  margin: 2vh 5vw 1vh 5vw;
-  min-height: 90vh; /* Adjust height to fit within the app */
-  text-align: center;
-  box-sizing: border-box;
-  color: #FFFFFF;
-}
+                                                  .container {
+                                                    display: flex;
+                                                      flex-direction: column;
+                                                        border: 5px solid #82fa1a;
+                                                          border-radius: 10px;
+                                                            padding: 20px;
+                                                              box-shadow: 0 0 20px #82fa1a;
+                                                                width: 60vw;
+                                                                  margin-top: -1vh;
+                                                                    justify-content: center;
+                                                                      align-items: center;
+                                                                        background-color: rgba(0, 0, 0, 0.1);
+                                                                          backdrop-filter: blur(4px);
+                                                                            margin: 2vh 5vw 1vh 5vw;
+                                                                              min-height: 90vh; /* Adjust height to fit within the app */
+                                                                                text-align: center;
+                                                                                  box-sizing: border-box;
+                                                                                    color: #FFFFFF;
+                                                                                    }
 
-.img {
-  margin-top: -3vh;
-  margin-bottom: -5vh;
-}
+                                                                                    .img {
+                                                                                      margin-top: -3vh;
+                                                                                        margin-bottom: -5vh;
+                                                                                        }
 
-.level {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
+                                                                                        .level {
+                                                                                          font-size: 24px;
+                                                                                            font-weight: bold;
+                                                                                              margin-bottom: 20px;
+                                                                                              }
 
-.status {
-  margin-bottom: 20px;
-}
+                                                                                              .status {
+                                                                                                margin-bottom: 20px;
+                                                                                                }
 
-.progress {
-  background-color: #3A3A3A;
-  padding: 10px;
-  border-radius: 5px;
-  display: inline-block;
-  margin-top: 5px;
-}
+                                                                                                .progress {
+                                                                                                  background-color: #3A3A3A;
+                                                                                                    padding: 10px;
+                                                                                                      border-radius: 5px;
+                                                                                                        display: inline-block;
+                                                                                                          margin-top: 5px;
+                                                                                                          }
 
-.image-placeholder {
-  background-color: #3A3A3A;
-  border-radius: 5px;
-  padding: 5px;
-  width: 30vw;
-  margin-left:13vw;
-  height: 25vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
+                                                                                                          .image-placeholder {
+                                                                                                            background-color: #3A3A3A;
+                                                                                                              border-radius: 5px;
+                                                                                                                padding: 5px;
+                                                                                                                  width: 30vw;
+                                                                                                                    margin-left:auto;
+                                                                                                                    margin-right: auto;
+                                                                                                                      height: 25vh;
+                                                                                                                        display: flex;
+                                                                                                                          align-items: center;
+                                                                                                                            justify-content: center;
+                                                                                                                              position: relative;
+                                                                                                                              }
 
-.uploaded-image {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 5px; 
-}
+                                                                                                                              .uploaded-image {
+                                                                                                                                max-width: 100%;
+                                                                                                                                  max-height: 100%;
+                                                                                                                                    border-radius: 5px; 
+                                                                                                                                    }
 
-.question {
-  margin-bottom: 20px;
-}
+                                                                                                                                    .question {
+                                                                                                                                      margin-bottom: 20px;
+                                                                                                                                      }
 
-.input-section {
-  display: flex;
-  flex-direction: column;
-  gap: -5px;
-  width: 80%;
-}
+                                                                                                                                      .input-section {
+                                                                                                                                        display: flex;
+                                                                                                                                          flex-direction: column;
+                                                                                                                                            gap: -5px;
+                                                                                                                                              width: 80%;
+                                                                                                                                              }
 
-.question-input, .password-input {
-  width: 100%;
-  padding: 10px;
-  margin-left: 4vw;
-  border: 1px solid #555;
-  border-radius: 5px;
-  background-color: #555;
-  color: #FFFFFF;
-}
+                                                                                                                                              .question-input, .password-input {
+                                                                                                                                                width: 100%;
+                                                                                                                                                  padding: 10px;
+                                                                                                                                                    margin-left: 4vw;
+                                                                                                                                                      border: 1px solid #555;
+                                                                                                                                                        border-radius: 5px;
+                                                                                                                                                          background-color: #555;
+                                                                                                                                                            color: #FFFFFF;
+                                                                                                                                                            }
 
-button {
-  width: 40%;
-  height: 40px;
-  padding: 10px;
-  background-color: #444;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-top: 20px;
-}
+                                                                                                                                                            button {
+                                                                                                                                                              width: 40%;
+                                                                                                                                                                height: 40px;
+                                                                                                                                                                  padding: 10px;
+                                                                                                                                                                    background-color: #444;
+                                                                                                                                                                      color: white;
+                                                                                                                                                                        border: none;
+                                                                                                                                                                          cursor: pointer;
+                                                                                                                                                                            border-radius: 5px;
+                                                                                                                                                                              margin-top: 20px;
+                                                                                                                                                                              }
 
-button:hover {
-  background-color: #006400;
-}
+                                                                                                                                                                              button:hover {
+                                                                                                                                                                                background-color: #006400;
+                                                                                                                                                                                }
 
-.loader {
-  margin-top: 20px;
-}
+                                                                                                                                                                                .loader {
+                                                                                                                                                                                  margin: 0 auto;
+                                                                                                                                                                                    display: block;
+                                                                                                                                                                                      position: absolute; /* Position it absolutely */
+                                                                                                                                                                                        top: 50%; /* Position from the top */
+                                                                                                                                                                                          left: 50%; /* Position from the left */
+                                                                                                                                                                                            transform: translate(-50%, -50%); /* Adjust to center */
+                                                                                                                                                                                            }
