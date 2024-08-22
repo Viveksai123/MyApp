@@ -1,0 +1,71 @@
+const bcrypt = require('bcryptjs');
+
+const password = 'the awakening';
+const saltRounds = 10;
+
+bcrypt.hash(password, saltRounds, (err, hash) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log('Hash:', hash);
+});
+
+
+
+
+
+
+
+
+
+
+
+import React, { useState } from 'react';
+import bcrypt from 'bcryptjs';
+
+const LoginForm = () => {
+  const [password, setPassword] = useState('');
+  const [message, setMessage] = useState('');
+
+  // Predefined hash value of the password "the awakening"
+  const predefinedHash = '$2a$10$6d3rAYyQmzrq5qu26W6A6.vC3ETXkHFM5yk7AqV8d1n9p5Yl/zQG'; // Example hash for "the awakening"
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      // Compare the entered password with the predefined hash
+      const match = await bcrypt.compare(password, predefinedHash);
+
+      if (match) {
+        setMessage('Login successful!');
+      } else {
+        setMessage('Login failed.');
+      }
+    } catch (error) {
+      setMessage('Error during authentication.');
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <div>
+        <label>Password:</label>
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      </div>
+      <button type="submit">Login</button>
+      <div>{message}</div>
+    </form>
+  );
+};
+
+
+npm install bcryptjs
+
+
+export default LoginForm;
